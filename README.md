@@ -47,6 +47,7 @@ kegg-transporter-signaling-network/
 │   ├── 07_link_prediction_node2vec_directed.ipynb
 │   ├── 08_drug_disease_heterogeneous_network.ipynb
 │   └── 09_boolean_network_attractor_simulation.ipynb
+│   └── 10_link_prediction_benchmark.ipynb
 │
 ├── data/
 │   ├── raw/                        # KEGG API raw JSON outputs
@@ -156,7 +157,17 @@ Extracts a subnetwork seeded from high-PageRank nodes. Assigns Boolean update ru
 
 - Input: `data/processed/oncogene_pathways.xml`
 - Dependency: `BooleanNetwork` class (defined in notebook)
+  
+---
 
+### 10 · Link Prediction Benchmark
+**`10_link_prediction_benchmark.ipynb`**
+
+Builds a directed graph from an XML file of oncogene pathways. Benchmarks four link prediction methods: (1) Adamic‑Adar + Jaccard combined score, (2) Node2Vec (undirected) + Random Forest, (3) Logistic Regression on topological features (Common Neighbors, Adamic‑Adar, Jaccard, Preferential Attachment), and (4) Node2Vec (directed) + Random Forest. Evaluates methods using AUC‑ROC, Average Precision, Precision@50, and Precision@100. Validates top 50 predictions against the STRING database. Generates ROC curves for comparison.
+
+- Input: `data/processed/oncogene_pathways.xml`
+- Dependency: `Link prediction functions defined in notebook (e.g., build_graph_from_xml, degree_matched_negative_edges, node2vec_undirected_embeddings, directed_node2vec_embeddings)
+ 
 ---
 
 ## Key Data File
