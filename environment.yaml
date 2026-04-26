@@ -1,0 +1,39 @@
+# environment.yml
+# Conda environment for the project "Knowledge Graph for Pathway Prediction and Drug Repurposing"
+# Create environment with: conda env create -f environment.yml
+# Activate with: conda activate pathway_prediction
+
+name: pathway_prediction
+
+channels:
+  - pytorch
+  - dglteam
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.12
+  - pip
+  # Core scientific computing
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - networkx
+  # Deep learning & graph neural networks
+  - pytorch::pytorch>=2.0
+  - dglteam::dgl>=1.0
+  # Node2Vec (pip-only)
+  - pip:
+    - node2vec
+    - gensim
+    # Bio & web APIs
+    - biopython
+    - requests
+    - mygene
+    - gseapy
+    # Additional utilities
+    - python-louvain
+    - tqdm
+    - joblib
