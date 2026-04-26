@@ -216,3 +216,18 @@ For notebook 08, download OpenTargets data files from https://platform.opentarge
 | 05 | Node2Vec + RF (undirected) | ~0.90+ |
 | 06 | Logistic Regression | Baseline comparator |
 | 07 | Node2Vec + RF (directed) | **0.9559** |
+
+---
+
+## Copyright and Usage Restrictions
+
+**Copyright (c) [2026] [Zeyuan Ma]. All Rights Reserved.**
+
+The code and documentation in this repository are provided for **research, learning, and non‑commercial purposes only**.
+
+**Commercial use is strictly prohibited**, including but not limited to:
+- Integrating this code or its derivatives into any commercial product or service.
+- Charging fees or deriving commercial benefit from this code or any derivative work.
+
+For commercial licensing, please contact the author.
+
